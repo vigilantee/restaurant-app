@@ -1,0 +1,2227 @@
+{
+    "units": [
+        {
+            "name": "grams",
+            "abbreviation": "g",
+            "type": "weight"
+        },
+        {
+            "name": "kilograms",
+            "abbreviation": "kg",
+            "type": "weight"
+        },
+        {
+            "name": "liters",
+            "abbreviation": "l",
+            "type": "volume"
+        },
+        {
+            "name": "milliliters",
+            "abbreviation": "ml",
+            "type": "volume"
+        },
+        {
+            "name": "pieces",
+            "abbreviation": "pcs",
+            "type": "count"
+        },
+        {
+            "name": "cups",
+            "abbreviation": "cups",
+            "type": "volume"
+        },
+        {
+            "name": "tablespoons",
+            "abbreviation": "tbsp",
+            "type": "volume"
+        },
+        {
+            "name": "teaspoons",
+            "abbreviation": "tsp",
+            "type": "volume"
+        }
+    ],
+    "suppliers": [
+        {
+            "name": "fresh fruits supplier",
+            "contact_person": "raj kumar",
+            "phone": "9876543210",
+            "email": "raj@freshfruits.com"
+        },
+        {
+            "name": "dairy products co.",
+            "contact_person": "sita devi",
+            "phone": "9876543211",
+            "email": "sita@dairy.com"
+        },
+        {
+            "name": "spices & more",
+            "contact_person": "arjun singh",
+            "phone": "9876543212",
+            "email": "arjun@spices.com"
+        },
+        {
+            "name": "vegetables direct",
+            "contact_person": "priya sharma",
+            "phone": "9876543213",
+            "email": "priya@vegetables.com"
+        },
+        {
+            "name": "grains & cereals",
+            "contact_person": "mohan lal",
+            "phone": "9876543214",
+            "email": "mohan@grains.com"
+        }
+    ],
+    "ingredients": [
+        {
+            "name": "mango",
+            "description": "fresh mango for shakes and desserts",
+            "unit": "grams",
+            "cost_per_unit": 0.012,
+            "minimum_stock": 2000,
+            "current_stock": 5000
+        },
+        {
+            "name": "banana",
+            "description": "fresh bananas",
+            "unit": "grams",
+            "cost_per_unit": 0.008,
+            "minimum_stock": 1000,
+            "current_stock": 2500
+        },
+        {
+            "name": "strawberry",
+            "description": "fresh strawberries",
+            "unit": "grams",
+            "cost_per_unit": 0.015,
+            "minimum_stock": 500,
+            "current_stock": 800
+        },
+        {
+            "name": "milk",
+            "description": "fresh dairy milk",
+            "unit": "milliliters",
+            "cost_per_unit": 0.001,
+            "minimum_stock": 5000,
+            "current_stock": 15000
+        },
+        {
+            "name": "yogurt",
+            "description": "fresh yogurt",
+            "unit": "grams",
+            "cost_per_unit": 0.004,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "ghee",
+            "description": "pure clarified butter",
+            "unit": "milliliters",
+            "cost_per_unit": 0.012,
+            "minimum_stock": 500,
+            "current_stock": 2000
+        },
+        {
+            "name": "vanilla ice cream",
+            "description": "premium vanilla ice cream",
+            "unit": "grams",
+            "cost_per_unit": 0.008,
+            "minimum_stock": 1000,
+            "current_stock": 2000
+        },
+        {
+            "name": "sugar",
+            "description": "white granulated sugar",
+            "unit": "grams",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "chocolate syrup",
+            "description": "rich chocolate syrup",
+            "unit": "milliliters",
+            "cost_per_unit": 0.005,
+            "minimum_stock": 500,
+            "current_stock": 1200
+        },
+        {
+            "name": "salt",
+            "description": "table salt",
+            "unit": "grams",
+            "cost_per_unit": 0.001,
+            "minimum_stock": 500,
+            "current_stock": 2000
+        },
+        {
+            "name": "basmati rice",
+            "description": "premium basmati rice",
+            "unit": "grams",
+            "cost_per_unit": 0.003,
+            "minimum_stock": 5000,
+            "current_stock": 15000
+        },
+        {
+            "name": "regular rice",
+            "description": "regular white rice",
+            "unit": "grams",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 3000,
+            "current_stock": 10000
+        },
+        {
+            "name": "chicken",
+            "description": "fresh chicken pieces",
+            "unit": "grams",
+            "cost_per_unit": 0.025,
+            "minimum_stock": 2000,
+            "current_stock": 8000
+        },
+        {
+            "name": "mutton",
+            "description": "fresh mutton pieces",
+            "unit": "grams",
+            "cost_per_unit": 0.045,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "paneer",
+            "description": "fresh cottage cheese",
+            "unit": "grams",
+            "cost_per_unit": 0.020,
+            "minimum_stock": 500,
+            "current_stock": 1500
+        },
+        {
+            "name": "eggs",
+            "description": "fresh chicken eggs",
+            "unit": "pieces",
+            "cost_per_unit": 0.500,
+            "minimum_stock": 50,
+            "current_stock": 200
+        },
+        {
+            "name": "onions",
+            "description": "fresh onions",
+            "unit": "grams",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 2000,
+            "current_stock": 10000
+        },
+        {
+            "name": "tomatoes",
+            "description": "fresh tomatoes",
+            "unit": "grams",
+            "cost_per_unit": 0.003,
+            "minimum_stock": 2000,
+            "current_stock": 8000
+        },
+        {
+            "name": "mixed vegetables",
+            "description": "seasonal mixed vegetables",
+            "unit": "grams",
+            "cost_per_unit": 0.005,
+            "minimum_stock": 2000,
+            "current_stock": 5000
+        },
+        {
+            "name": "potatoes",
+            "description": "fresh potatoes",
+            "unit": "grams",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 3000,
+            "current_stock": 8000
+        },
+        {
+            "name": "cauliflower",
+            "description": "fresh cauliflower",
+            "unit": "grams",
+            "cost_per_unit": 0.004,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "ginger-garlic paste",
+            "description": "fresh ginger garlic paste",
+            "unit": "grams",
+            "cost_per_unit": 0.008,
+            "minimum_stock": 500,
+            "current_stock": 1500
+        },
+        {
+            "name": "biryani masala",
+            "description": "special biryani spice mix",
+            "unit": "grams",
+            "cost_per_unit": 0.020,
+            "minimum_stock": 200,
+            "current_stock": 800
+        },
+        {
+            "name": "garam masala",
+            "description": "mixed spice powder",
+            "unit": "grams",
+            "cost_per_unit": 0.015,
+            "minimum_stock": 200,
+            "current_stock": 600
+        },
+        {
+            "name": "turmeric powder",
+            "description": "pure turmeric powder",
+            "unit": "grams",
+            "cost_per_unit": 0.010,
+            "minimum_stock": 200,
+            "current_stock": 500
+        },
+        {
+            "name": "red chili powder",
+            "description": "red chili powder",
+            "unit": "grams",
+            "cost_per_unit": 0.012,
+            "minimum_stock": 200,
+            "current_stock": 600
+        },
+        {
+            "name": "cumin powder",
+            "description": "ground cumin seeds",
+            "unit": "grams",
+            "cost_per_unit": 0.018,
+            "minimum_stock": 100,
+            "current_stock": 300
+        },
+        {
+            "name": "coriander powder",
+            "description": "ground coriander seeds",
+            "unit": "grams",
+            "cost_per_unit": 0.015,
+            "minimum_stock": 100,
+            "current_stock": 400
+        },
+        {
+            "name": "cashews",
+            "description": "premium cashew nuts",
+            "unit": "grams",
+            "cost_per_unit": 0.080,
+            "minimum_stock": 200,
+            "current_stock": 500
+        },
+        {
+            "name": "raisins",
+            "description": "dry grapes/raisins",
+            "unit": "grams",
+            "cost_per_unit": 0.060,
+            "minimum_stock": 100,
+            "current_stock": 300
+        },
+        {
+            "name": "almonds",
+            "description": "whole almonds",
+            "unit": "grams",
+            "cost_per_unit": 0.100,
+            "minimum_stock": 100,
+            "current_stock": 250
+        },
+        {
+            "name": "cooking oil",
+            "description": "refined cooking oil",
+            "unit": "milliliters",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 2000,
+            "current_stock": 8000
+        },
+        {
+            "name": "butter",
+            "description": "fresh butter",
+            "unit": "grams",
+            "cost_per_unit": 0.008,
+            "minimum_stock": 500,
+            "current_stock": 1500
+        },
+        {
+            "name": "wheat flour",
+            "description": "all-purpose wheat flour",
+            "unit": "grams",
+            "cost_per_unit": 0.002,
+            "minimum_stock": 5000,
+            "current_stock": 15000
+        },
+        {
+            "name": "rice flour",
+            "description": "fine rice flour",
+            "unit": "grams",
+            "cost_per_unit": 0.003,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "urad dal",
+            "description": "black gram lentils",
+            "unit": "grams",
+            "cost_per_unit": 0.008,
+            "minimum_stock": 1000,
+            "current_stock": 3000
+        },
+        {
+            "name": "chana dal",
+            "description": "split chickpea lentils",
+            "unit": "grams",
+            "cost_per_unit": 0.006,
+            "minimum_stock": 1000,
+            "current_stock": 2500
+        },
+        {
+            "name": "black lentils",
+            "description": "whole black lentils for dal makhani",
+            "unit": "grams",
+            "cost_per_unit": 0.009,
+            "minimum_stock": 1000,
+            "current_stock": 2000
+        },
+        {
+            "name": "kidney beans",
+            "description": "rajma for curry",
+            "unit": "grams",
+            "cost_per_unit": 0.007,
+            "minimum_stock": 1000,
+            "current_stock": 2000
+        },
+        {
+            "name": "soy sauce",
+            "description": "dark soy sauce",
+            "unit": "milliliters",
+            "cost_per_unit": 0.004,
+            "minimum_stock": 500,
+            "current_stock": 1500
+        },
+        {
+            "name": "vinegar",
+            "description": "white vinegar",
+            "unit": "milliliters",
+            "cost_per_unit": 0.003,
+            "minimum_stock": 500,
+            "current_stock": 1200
+        },
+        {
+            "name": "noodles",
+            "description": "hakka noodles",
+            "unit": "grams",
+            "cost_per_unit": 0.004,
+            "minimum_stock": 2000,
+            "current_stock": 5000
+        },
+        {
+            "name": "cornflour",
+            "description": "corn starch",
+            "unit": "grams",
+            "cost_per_unit": 0.005,
+            "minimum_stock": 500,
+            "current_stock": 1500
+        },
+        {
+            "name": "green chili sauce",
+            "description": "spicy green chili sauce",
+            "unit": "milliliters",
+            "cost_per_unit": 0.006,
+            "minimum_stock": 300,
+            "current_stock": 800
+        },
+        {
+            "name": "tomato ketchup",
+            "description": "tomato sauce",
+            "unit": "milliliters",
+            "cost_per_unit": 0.004,
+            "minimum_stock": 500,
+            "current_stock": 1200
+        },
+        {
+            "name": "tea leaves",
+            "description": "black tea leaves",
+            "unit": "grams",
+            "cost_per_unit": 0.020,
+            "minimum_stock": 200,
+            "current_stock": 800
+        },
+        {
+            "name": "coffee powder",
+            "description": "ground coffee",
+            "unit": "grams",
+            "cost_per_unit": 0.030,
+            "minimum_stock": 200,
+            "current_stock": 600
+        },
+        {
+            "name": "lime",
+            "description": "fresh lime for drinks",
+            "unit": "pieces",
+            "cost_per_unit": 0.300,
+            "minimum_stock": 20,
+            "current_stock": 100
+        },
+        {
+            "name": "khoya",
+            "description": "milk solids for sweets",
+            "unit": "grams",
+            "cost_per_unit": 0.025,
+            "minimum_stock": 500,
+            "current_stock": 1000
+        },
+        {
+            "name": "rose water",
+            "description": "rose essence",
+            "unit": "milliliters",
+            "cost_per_unit": 0.010,
+            "minimum_stock": 200,
+            "current_stock": 500
+        },
+        {
+            "name": "cardamom",
+            "description": "green cardamom pods",
+            "unit": "grams",
+            "cost_per_unit": 0.200,
+            "minimum_stock": 50,
+            "current_stock": 150
+        }
+    ],
+    "categories": [
+        {
+            "name": "beverages",
+            "description": "hot and cold drinks",
+            "display_order": 1
+        },
+        {
+            "name": "shakes",
+            "description": "fresh fruit shakes and smoothies",
+            "display_order": 2
+        },
+        {
+            "name": "north indian",
+            "description": "traditional north indian cuisine",
+            "display_order": 3
+        },
+        {
+            "name": "south indian",
+            "description": "authentic south indian dishes",
+            "display_order": 4
+        },
+        {
+            "name": "chinese",
+            "description": "indo-chinese specialties",
+            "display_order": 5
+        },
+        {
+            "name": "desserts",
+            "description": "sweet treats and ice creams",
+            "display_order": 6
+        },
+        {
+            "name": "starters",
+            "description": "appetizers and snacks",
+            "display_order": 7
+        },
+        {
+            "name": "breads",
+            "description": "freshly baked indian breads",
+            "display_order": 8
+        }
+    ],
+    "menu_items": [
+        {
+            "category": "beverages",
+            "name": "masala tea",
+            "description": "traditional indian spiced tea",
+            "price": 25.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "tea leaves",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 100.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "beverages",
+            "name": "coffee",
+            "description": "hot filter coffee",
+            "price": 30.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "coffee powder",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 80.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 12.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "beverages",
+            "name": "cold coffee",
+            "description": "iced coffee with milk",
+            "price": 45.00,
+            "is_vegetarian": true,
+            "preparation_time": 8,
+            "ingredients": [
+                {
+                    "name": "coffee powder",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 150.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "beverages",
+            "name": "fresh lime water",
+            "description": "sweet/salt lime water",
+            "price": 35.00,
+            "is_vegetarian": true,
+            "preparation_time": 3,
+            "ingredients": [
+                {
+                    "name": "lime",
+                    "quantity": 1.0,
+                    "unit": "pieces"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "beverages",
+            "name": "lassi",
+            "description": "traditional yogurt drink",
+            "price": 40.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "yogurt",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "shakes",
+            "name": "banana shake",
+            "description": "fresh banana blended with milk",
+            "price": 60.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "banana",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "shakes",
+            "name": "mango shake",
+            "description": "fresh mango shake with cream",
+            "price": 75.00,
+            "is_vegetarian": true,
+            "preparation_time": 7,
+            "ingredients": [
+                {
+                    "name": "mango",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 25.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "shakes",
+            "name": "chocolate shake",
+            "description": "rich chocolate milkshake",
+            "price": 70.00,
+            "is_vegetarian": true,
+            "preparation_time": 6,
+            "ingredients": [
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "chocolate syrup",
+                    "quantity": 30.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "shakes",
+            "name": "strawberry shake",
+            "description": "fresh strawberry milkshake",
+            "price": 80.00,
+            "is_vegetarian": true,
+            "preparation_time": 6,
+            "ingredients": [
+                {
+                    "name": "strawberry",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 25.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "shakes",
+            "name": "mixed fruit shake",
+            "description": "seasonal fruits blended together",
+            "price": 85.00,
+            "is_vegetarian": true,
+            "preparation_time": 8,
+            "ingredients": [
+                {
+                    "name": "mango",
+                    "quantity": 75.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "banana",
+                    "quantity": 60.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "strawberry",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "chicken biryani",
+            "description": "aromatic basmati rice with tender chicken",
+            "price": 180.00,
+            "is_vegetarian": false,
+            "spice_level": 3,
+            "preparation_time": 25,
+            "ingredients": [
+                {
+                    "name": "basmati rice",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "chicken",
+                    "quantity": 250.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "biryani masala",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ghee",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cashews",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "raisins",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "eggs",
+                    "quantity": 1.0,
+                    "unit": "pieces"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "mutton biryani",
+            "description": "royal mutton biryani with boiled egg",
+            "price": 220.00,
+            "is_vegetarian": false,
+            "spice_level": 3,
+            "preparation_time": 30,
+            "ingredients": [
+                {
+                    "name": "basmati rice",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mutton",
+                    "quantity": 300.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 60.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "biryani masala",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ghee",
+                    "quantity": 25.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cashews",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "raisins",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "eggs",
+                    "quantity": 1.0,
+                    "unit": "pieces"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "veg biryani",
+            "description": "mixed vegetable biryani with raita",
+            "price": 150.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 20,
+            "ingredients": [
+                {
+                    "name": "basmati rice",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "biryani masala",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ghee",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cashews",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "raisins",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "butter chicken",
+            "description": "creamy tomato-based chicken curry",
+            "price": 200.00,
+            "is_vegetarian": false,
+            "spice_level": 2,
+            "preparation_time": 20,
+            "ingredients": [
+                {
+                    "name": "chicken",
+                    "quantity": 300.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "butter",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 100.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "dal makhani",
+            "description": "rich black lentils in butter and cream",
+            "price": 140.00,
+            "is_vegetarian": true,
+            "spice_level": 1,
+            "preparation_time": 15,
+            "ingredients": [
+                {
+                    "name": "black lentils",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "butter",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "paneer butter masala",
+            "description": "cottage cheese in rich tomato gravy",
+            "price": 160.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 15,
+            "ingredients": [
+                {
+                    "name": "paneer",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "butter",
+                    "quantity": 25.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 12.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 50.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "north indian",
+            "name": "rajma rice",
+            "description": "kidney beans curry with steamed rice",
+            "price": 120.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 18,
+            "ingredients": [
+                {
+                    "name": "kidney beans",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "regular rice",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "tomatoes",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "south indian",
+            "name": "masala dosa",
+            "description": "crispy crepe with spiced potato filling",
+            "price": 80.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 12,
+            "ingredients": [
+                {
+                    "name": "rice flour",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "urad dal",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "potatoes",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cumin powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "south indian",
+            "name": "plain dosa",
+            "description": "simple crispy rice and lentil crepe",
+            "price": 60.00,
+            "is_vegetarian": true,
+            "spice_level": 1,
+            "preparation_time": 10,
+            "ingredients": [
+                {
+                    "name": "rice flour",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "urad dal",
+                    "quantity": 25.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 10.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "south indian",
+            "name": "idli sambar",
+            "description": "3 steamed rice cakes with lentil curry",
+            "price": 70.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 8,
+            "ingredients": [
+                {
+                    "name": "rice flour",
+                    "quantity": 60.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "urad dal",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "chana dal",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 10.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "south indian",
+            "name": "vada sambar",
+            "description": "2 fried lentil donuts with sambar",
+            "price": 75.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 10,
+            "ingredients": [
+                {
+                    "name": "urad dal",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "chana dal",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 50.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "south indian",
+            "name": "uthappam",
+            "description": "thick pancake with vegetables",
+            "price": 85.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 15,
+            "ingredients": [
+                {
+                    "name": "rice flour",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "urad dal",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "veg fried rice",
+            "description": "wok-tossed rice with mixed vegetables",
+            "price": 110.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 12,
+            "ingredients": [
+                {
+                    "name": "regular rice",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "chicken fried rice",
+            "description": "fried rice with chicken and vegetables",
+            "price": 130.00,
+            "is_vegetarian": false,
+            "spice_level": 2,
+            "preparation_time": 15,
+            "ingredients": [
+                {
+                    "name": "regular rice",
+                    "quantity": 200.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "chicken",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 25.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "eggs",
+                    "quantity": 1.0,
+                    "unit": "pieces"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "veg noodles",
+            "description": "stir-fried noodles with vegetables",
+            "price": 120.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 12,
+            "ingredients": [
+                {
+                    "name": "noodles",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 12.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "green chili sauce",
+                    "quantity": 10.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "chicken noodles",
+            "description": "hakka noodles with chicken",
+            "price": 140.00,
+            "is_vegetarian": false,
+            "spice_level": 2,
+            "preparation_time": 15,
+            "ingredients": [
+                {
+                    "name": "noodles",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "chicken",
+                    "quantity": 120.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 40.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 12.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 25.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "green chili sauce",
+                    "quantity": 10.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "gobi manchurian",
+            "description": "crispy cauliflower in spicy sauce",
+            "price": 135.00,
+            "is_vegetarian": true,
+            "spice_level": 3,
+            "preparation_time": 18,
+            "ingredients": [
+                {
+                    "name": "cauliflower",
+                    "quantity": 300.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "tomato ketchup",
+                    "quantity": 25.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "green chili sauce",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cornflour",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 50.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 12.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "chinese",
+            "name": "chicken manchurian",
+            "description": "chicken balls in tangy sauce",
+            "price": 155.00,
+            "is_vegetarian": false,
+            "spice_level": 3,
+            "preparation_time": 20,
+            "ingredients": [
+                {
+                    "name": "chicken",
+                    "quantity": 250.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "onions",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "soy sauce",
+                    "quantity": 20.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "tomato ketchup",
+                    "quantity": 25.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "green chili sauce",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cornflour",
+                    "quantity": 30.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 50.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 12.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "eggs",
+                    "quantity": 1.0,
+                    "unit": "pieces"
+                }
+            ]
+        },
+        {
+            "category": "starters",
+            "name": "samosa",
+            "description": "crispy pastry with spiced potato filling",
+            "price": 20.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "potatoes",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 30.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cumin powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "coriander powder",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "starters",
+            "name": "pakoda",
+            "description": "mixed vegetable fritters",
+            "price": 60.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 8,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "mixed vegetables",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 100.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "red chili powder",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 5.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "starters",
+            "name": "chicken tikka",
+            "description": "grilled marinated chicken pieces",
+            "price": 180.00,
+            "is_vegetarian": false,
+            "spice_level": 3,
+            "preparation_time": 20,
+            "ingredients": [
+                {
+                    "name": "chicken",
+                    "quantity": 300.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "red chili powder",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 15.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "starters",
+            "name": "paneer tikka",
+            "description": "grilled cottage cheese with spices",
+            "price": 160.00,
+            "is_vegetarian": true,
+            "spice_level": 2,
+            "preparation_time": 18,
+            "ingredients": [
+                {
+                    "name": "paneer",
+                    "quantity": 250.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "garam masala",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "red chili powder",
+                    "quantity": 6.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "turmeric powder",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 10.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "breads",
+            "name": "roti",
+            "description": "plain wheat flatbread",
+            "price": 15.00,
+            "is_vegetarian": true,
+            "preparation_time": 3,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 5.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "breads",
+            "name": "butter roti",
+            "description": "roti brushed with butter",
+            "price": 20.00,
+            "is_vegetarian": true,
+            "preparation_time": 3,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 80.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "butter",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "breads",
+            "name": "naan",
+            "description": "soft leavened bread",
+            "price": 25.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 30.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 8.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "breads",
+            "name": "garlic naan",
+            "description": "naan topped with garlic",
+            "price": 35.00,
+            "is_vegetarian": true,
+            "preparation_time": 6,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 30.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 8.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "ginger-garlic paste",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "breads",
+            "name": "butter naan",
+            "description": "naan brushed with butter",
+            "price": 30.00,
+            "is_vegetarian": true,
+            "preparation_time": 5,
+            "ingredients": [
+                {
+                    "name": "wheat flour",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "yogurt",
+                    "quantity": 20.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 30.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "butter",
+                    "quantity": 15.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "salt",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "desserts",
+            "name": "gulab jamun",
+            "description": "sweet milk dumplings in sugar syrup",
+            "price": 60.00,
+            "is_vegetarian": true,
+            "preparation_time": 2,
+            "ingredients": [
+                {
+                    "name": "khoya",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 50.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "cardamom",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cooking oil",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                }
+            ]
+        },
+        {
+            "category": "desserts",
+            "name": "rasmalai",
+            "description": "cottage cheese balls in sweetened milk",
+            "price": 80.00,
+            "is_vegetarian": true,
+            "preparation_time": 2,
+            "ingredients": [
+                {
+                    "name": "paneer",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "milk",
+                    "quantity": 300.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 100.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cardamom",
+                    "quantity": 3.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "almonds",
+                    "quantity": 10.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "desserts",
+            "name": "ice cream",
+            "description": "vanilla/chocolate/strawberry",
+            "price": 50.00,
+            "is_vegetarian": true,
+            "preparation_time": 2,
+            "ingredients": [
+                {
+                    "name": "vanilla ice cream",
+                    "quantity": 150.0,
+                    "unit": "grams"
+                }
+            ]
+        },
+        {
+            "category": "desserts",
+            "name": "kulfi",
+            "description": "traditional indian ice cream",
+            "price": 45.00,
+            "is_vegetarian": true,
+            "preparation_time": 2,
+            "ingredients": [
+                {
+                    "name": "milk",
+                    "quantity": 200.0,
+                    "unit": "milliliters"
+                },
+                {
+                    "name": "sugar",
+                    "quantity": 50.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "cardamom",
+                    "quantity": 2.0,
+                    "unit": "grams"
+                },
+                {
+                    "name": "almonds",
+                    "quantity": 8.0,
+                    "unit": "grams"
+                }
+            ]
+        }
+    ],
+    "restaurant_tables": [
+        {
+            "table_number": "t01",
+            "capacity": 2,
+            "location": "ground floor"
+        },
+        {
+            "table_number": "t02",
+            "capacity": 4,
+            "location": "ground floor"
+        },
+        {
+            "table_number": "t03",
+            "capacity": 4,
+            "location": "first floor"
+        },
+        {
+            "table_number": "t04",
+            "capacity": 6,
+            "location": "first floor"
+        },
+        {
+            "table_number": "t05",
+            "capacity": 2,
+            "location": "ground floor"
+        },
+        {
+            "table_number": "t06",
+            "capacity": 4,
+            "location": "first floor"
+        },
+        {
+            "table_number": "t07",
+            "capacity": 8,
+            "location": "first floor"
+        },
+        {
+            "table_number": "t08",
+            "capacity": 2,
+            "location": "online"
+        },
+        {
+            "table_number": "t09",
+            "capacity": 4,
+            "location": "online"
+        },
+        {
+            "table_number": "t10",
+            "capacity": 6,
+            "location": "online"
+        }
+    ],
+    "staff": [
+        {
+            "name": "admin user",
+            "email": "admin@restaurant.com",
+            "role": "admin"
+        },
+        {
+            "name": "manager john",
+            "email": "manager@restaurant.com",
+            "role": "manager"
+        },
+        {
+            "name": "waiter ram",
+            "email": "ram@restaurant.com",
+            "role": "waiter"
+        },
+        {
+            "name": "waiter sita",
+            "email": "sita@restaurant.com",
+            "role": "waiter"
+        },
+        {
+            "name": "chef kumar",
+            "email": "chef@restaurant.com",
+            "role": "chef"
+        },
+        {
+            "name": "cashier lisa",
+            "email": "cashier@restaurant.com",
+            "role": "cashier"
+        }
+    ],
+    "customers": [
+        {
+            "name": "walk-in customer",
+            "phone": "9999999999",
+            "email": "walkin@restaurant.com"
+        },
+        {
+            "name": "john smith",
+            "phone": "9876543210",
+            "email": "john@email.com"
+        },
+        {
+            "name": "priya sharma",
+            "phone": "9876543211",
+            "email": "priya@email.com"
+        }
+    ],
+    "users": [
+        {
+            "name": "john doe",
+            "email": "john.doe@example.com"
+        },
+        {
+            "name": "jane smith",
+            "email": "jane.smith@example.com"
+        },
+        {
+            "name": "bob johnson",
+            "email": "bob.johnson@example.com"
+        }
+    ]
+}

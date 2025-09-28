@@ -13,6 +13,7 @@ import {
   Filter,
 } from "lucide-react";
 import toast from "react-hot-toast";
+import EnhancedTableLayout from "./EnhancedTableDisplay";
 
 const TableLayout = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const TableLayout = () => {
       const [tablesResponse, ordersResponse] = await Promise.all([
         tablesAPI.getAll(),
         ordersAPI.getAll({
-          status: "pending,confirmed,preparing,ready,served",
+          // status: "pending,confirmed,preparing,ready,served",
           limit: 100,
         }),
       ]);
@@ -220,216 +221,8 @@ const TableLayout = () => {
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-lg shadow p-4">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Filter className="h-4 w-4 text-gray-400" />
-              <select
-                value={locationFilter}
-                onChange={(e) => setLocationFilter(e.target.value)}
-                className="text-sm border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="all">All Locations</option>
-                {locations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </div>
 
-            <label className="flex items-center space-x-2 text-sm">
-              <input
-                type="checkbox"
-                checked={showAvailableOnly}
-                onChange={(e) => setShowAvailableOnly(e.target.checked)}
-                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <span>Available only</span>
-            </label>
-          </div>
-
-          {/* Legend */}
-          <div className="flex items-center space-x-4 text-xs">
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 bg-green-100 border border-green-300 rounded"></div>
-              <span>Available</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 bg-yellow-100 border border-yellow-300 rounded"></div>
-              <span>Ordered</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 bg-blue-100 border border-blue-300 rounded"></div>
-              <span>Preparing</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 bg-orange-100 border border-orange-300 rounded"></div>
-              <span>Ready</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <div className="w-3 h-3 bg-purple-100 border border-purple-300 rounded"></div>
-              <span>Served</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Table Layout Grid */}
-      <div className="bg-white rounded-lg shadow p-6">
-        {locations.length > 0 ? (
-          // Group by location
-          <div className="space-y-8">
-            {locations.map((location) => {
-              const locationTables = filteredTables.filter(
-                (table) => table.location === location
-              );
-              if (locationTables.length === 0) return null;
-
-              return (
-                <div key={location}>
-                  <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
-                    <MapPin className="h-5 w-5 mr-2 text-gray-400" />
-                    {location}
-                    <span className="ml-2 text-sm text-gray-500">
-                      ({locationTables.length} tables)
-                    </span>
-                  </h3>
-
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-                    {locationTables.map((table) => {
-                      const order = getTableOrder(table.id);
-                      return (
-                        <div
-                          key={table.id}
-                          onClick={() => handleTableClick(table)}
-                          className={`
-                            relative p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md
-                            ${getTableStatusColor(table)}
-                          `}
-                        >
-                          <div className="text-center">
-                            <div className="flex items-center justify-center mb-2">
-                              {getTableIcon(table)}
-                            </div>
-
-                            <div className="font-medium text-sm">
-                              {table.table_number}
-                            </div>
-
-                            <div className="text-xs opacity-75 mt-1">
-                              {table.capacity} seats
-                            </div>
-
-                            {order && (
-                              <div className="mt-2 space-y-1">
-                                <div className="text-xs font-medium">
-                                  {order.order_number}
-                                </div>
-                                <div className="text-xs opacity-75">
-                                  {order.customer_name || "Walk-in"}
-                                </div>
-                                <div className="text-xs opacity-75">
-                                  ₹{order.total_amount?.toFixed(0)}
-                                </div>
-                              </div>
-                            )}
-
-                            {table.is_available && (
-                              <div className="mt-2">
-                                <Plus className="h-3 w-3 mx-auto opacity-60" />
-                              </div>
-                            )}
-                          </div>
-
-                          {/* Status indicator */}
-                          <div
-                            className={`
-                            absolute top-1 right-1 w-2 h-2 rounded-full
-                            ${
-                              table.is_available ? "bg-green-500" : "bg-red-500"
-                            }
-                          `}
-                          ></div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          // Single grid if no locations
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            {filteredTables.map((table) => {
-              const order = getTableOrder(table.id);
-              return (
-                <div
-                  key={table.id}
-                  onClick={() => handleTableClick(table)}
-                  className={`
-                    relative p-4 rounded-lg border-2 cursor-pointer transition-all hover:shadow-md
-                    ${getTableStatusColor(table)}
-                  `}
-                >
-                  <div className="text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      {getTableIcon(table)}
-                    </div>
-
-                    <div className="font-medium text-sm">
-                      {table.table_number}
-                    </div>
-
-                    <div className="text-xs opacity-75 mt-1">
-                      {table.capacity} seats
-                    </div>
-
-                    {order && (
-                      <div className="mt-2 space-y-1">
-                        <div className="text-xs font-medium">
-                          {order.order_number}
-                        </div>
-                        <div className="text-xs opacity-75">
-                          {order.customer_name || "Walk-in"}
-                        </div>
-                        <div className="text-xs opacity-75">
-                          ₹{order.total_amount?.toFixed(0)}
-                        </div>
-                      </div>
-                    )}
-
-                    {table.is_available && (
-                      <div className="mt-2">
-                        <Plus className="h-3 w-3 mx-auto opacity-60" />
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Status indicator */}
-                  <div
-                    className={`
-                    absolute top-1 right-1 w-2 h-2 rounded-full
-                    ${table.is_available ? "bg-green-500" : "bg-red-500"}
-                  `}
-                  ></div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-
-        {filteredTables.length === 0 && (
-          <div className="text-center py-12">
-            <Users className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-            <p className="text-gray-500">
-              No tables found matching your criteria
-            </p>
-          </div>
-        )}
-      </div>
+      <EnhancedTableLayout />
 
       {/* Quick Actions */}
       <div className="bg-white rounded-lg shadow p-6">
