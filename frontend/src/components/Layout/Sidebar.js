@@ -93,9 +93,7 @@ const Sidebar = () => {
               </div>
               {state.sidebarOpen && (
                 <div>
-                  <h2 className="text-lg font-bold text-gray-900">
-                    RestaurantOS
-                  </h2>
+                  <h2 className="text-lg font-bold text-gray-900">Miraya</h2>
                   <p className="text-xs text-gray-500">Management System</p>
                 </div>
               )}
@@ -221,9 +219,7 @@ const Sidebar = () => {
                     <ChefHat className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h2 className="text-lg font-bold text-gray-900">
-                      RestaurantOS
-                    </h2>
+                    <h2 className="text-lg font-bold text-gray-900">Miraya</h2>
                     <p className="text-xs text-gray-500">Management System</p>
                   </div>
                 </div>
