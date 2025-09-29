@@ -44,7 +44,7 @@ const OrderDetails = () => {
   const handleStatusUpdate = async (newStatus) => {
     try {
       setIsUpdating(true);
-      await updateOrderStatus(order.id, newStatus);
+      await updateOrderStatus(order?.id, newStatus);
       setOrder({ ...order, order_status: newStatus });
       toast.success(`Order status updated to ${newStatus}`);
     } catch (error) {
@@ -97,17 +97,17 @@ const OrderDetails = () => {
           </button>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Order Details</h1>
-            <p className="text-gray-600">{order.order_number}</p>
+            <p className="text-gray-600">{order?.order_number}</p>
           </div>
         </div>
 
         <div className="flex items-center space-x-2">
           <span
             className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(
-              order.order_status
+              order?.order_status
             )}`}
           >
-            {order.order_status}
+            {order?.order_status}
           </span>
         </div>
       </div>
@@ -122,7 +122,7 @@ const OrderDetails = () => {
                 Order Information
               </h3>
               <div className="text-sm text-gray-500">
-                {format(new Date(order.order_date), "MMM dd, yyyy HH:mm")}
+                {format(new Date(order?.order_date), "MMM dd, yyyy HH:mm")}
               </div>
             </div>
 
@@ -134,12 +134,12 @@ const OrderDetails = () => {
                     Order Type
                   </div>
                   <div className="text-sm text-gray-500 capitalize">
-                    {order.order_type?.replace("_", " ")}
+                    {order?.order_type?.replace("_", " ")}
                   </div>
                 </div>
               </div>
 
-              {order.table_number && (
+              {order?.table_number && (
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-gray-400" />
                   <div>
@@ -147,14 +147,14 @@ const OrderDetails = () => {
                       Table
                     </div>
                     <div className="text-sm text-gray-500">
-                      Table {order.table_number}
-                      {order.table_location && ` (${order.table_location})`}
+                      Table {order?.table_number}
+                      {order?.table_location && ` (${order?.table_location})`}
                     </div>
                   </div>
                 </div>
               )}
 
-              {order.customer_name && (
+              {order?.customer_name && (
                 <div className="flex items-center space-x-3">
                   <User className="h-5 w-5 text-gray-400" />
                   <div>
@@ -162,9 +162,9 @@ const OrderDetails = () => {
                       Customer
                     </div>
                     <div className="text-sm text-gray-500">
-                      {order.customer_name}
-                      {order.customer_phone && (
-                        <div className="text-xs">{order.customer_phone}</div>
+                      {order?.customer_name}
+                      {order?.customer_phone && (
+                        <div className="text-xs">{order?.customer_phone}</div>
                       )}
                     </div>
                   </div>
@@ -172,13 +172,13 @@ const OrderDetails = () => {
               )}
             </div>
 
-            {order.special_instructions && (
+            {order?.special_instructions && (
               <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
                 <div className="text-sm font-medium text-yellow-800">
                   Special Instructions:
                 </div>
                 <div className="text-sm text-yellow-700">
-                  {order.special_instructions}
+                  {order?.special_instructions}
                 </div>
               </div>
             )}
@@ -190,9 +190,9 @@ const OrderDetails = () => {
               Order Items
             </h3>
 
-            {order.items && order.items.length > 0 ? (
+            {order?.items && order?.items.length > 0 ? (
               <div className="space-y-3">
-                {order.items.map((item) => (
+                {order?.items.map((item) => (
                   <div
                     key={item.id}
                     className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0"
@@ -224,7 +224,7 @@ const OrderDetails = () => {
                     </div>
                     <div className="text-right ml-4">
                       <div className="text-sm font-medium text-gray-900">
-                        ₹{item.total_price?.toFixed(2)}
+                        ₹{item.total_price?.toFixed?.(2)}
                       </div>
                       {item.preparation_time && (
                         <div className="text-xs text-gray-500 flex items-center">
@@ -261,9 +261,9 @@ const OrderDetails = () => {
                 <button
                   key={status}
                   onClick={() => handleStatusUpdate(status)}
-                  disabled={isUpdating || order.order_status === status}
+                  disabled={isUpdating || order?.order_status === status}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                    order.order_status === status
+                    order?.order_status === status
                       ? "bg-blue-100 text-blue-800 border border-blue-200"
                       : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200"
                   } ${isUpdating ? "opacity-50 cursor-not-allowed" : ""}`}
@@ -283,49 +283,49 @@ const OrderDetails = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">Subtotal:</span>
                 <span className="text-gray-900">
-                  ₹{order.subtotal?.toFixed(2) || "0.00"}
+                  ₹{order?.subtotal?.toFixed?.(2) || "0.00"}
                 </span>
               </div>
-              {order.discount_amount > 0 && (
+              {order?.discount_amount > 0 && (
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Discount:</span>
                   <span className="text-red-600">
-                    -₹{order.discount_amount?.toFixed(2)}
+                    -₹{order?.discount_amount?.toFixed?.(2)}
                   </span>
                 </div>
               )}
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">Tax:</span>
                 <span className="text-gray-900">
-                  ₹{order.tax_amount?.toFixed(2) || "0.00"}
+                  ₹{order?.tax_amount?.toFixed?.(2) || "0.00"}
                 </span>
               </div>
               <div className="border-t pt-2">
                 <div className="flex justify-between font-medium">
                   <span>Total:</span>
-                  <span>₹{order.total_amount?.toFixed(2) || "0.00"}</span>
+                  <span>₹{order?.total_amount?.toFixed?.(2) || "0.00"}</span>
                 </div>
               </div>
 
-              {order.payment_status && (
+              {order?.payment_status && (
                 <div className="mt-3 pt-3 border-t">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">Payment Status:</span>
                     <span
                       className={`font-medium ${
-                        order.payment_status === "paid"
+                        order?.payment_status === "paid"
                           ? "text-green-600"
                           : "text-yellow-600"
                       }`}
                     >
-                      {order.payment_status}
+                      {order?.payment_status}
                     </span>
                   </div>
-                  {order.payment_method && (
+                  {order?.payment_method && (
                     <div className="flex justify-between text-sm mt-1">
                       <span className="text-gray-600">Payment Method:</span>
                       <span className="text-gray-900 capitalize">
-                        {order.payment_method}
+                        {order?.payment_method}
                       </span>
                     </div>
                   )}
@@ -335,7 +335,7 @@ const OrderDetails = () => {
           </div>
 
           {/* Timing Information */}
-          {(order.estimated_ready_time || order.completed_at) && (
+          {(order?.estimated_ready_time || order?.completed_at) && (
             <div className="bg-white rounded-lg shadow p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Timing</h3>
               <div className="space-y-3">
@@ -346,12 +346,12 @@ const OrderDetails = () => {
                       Order Placed
                     </div>
                     <div className="text-sm text-gray-500">
-                      {format(new Date(order.order_date), "HH:mm, MMM dd")}
+                      {format(new Date(order?.order_date), "HH:mm, MMM dd")}
                     </div>
                   </div>
                 </div>
 
-                {order.estimated_ready_time && (
+                {order?.estimated_ready_time && (
                   <div className="flex items-center space-x-3">
                     <Clock className="h-5 w-5 text-orange-400" />
                     <div>
@@ -360,7 +360,7 @@ const OrderDetails = () => {
                       </div>
                       <div className="text-sm text-gray-500">
                         {format(
-                          new Date(order.estimated_ready_time),
+                          new Date(order?.estimated_ready_time),
                           "HH:mm, MMM dd"
                         )}
                       </div>
@@ -368,7 +368,7 @@ const OrderDetails = () => {
                   </div>
                 )}
 
-                {order.completed_at && (
+                {order?.completed_at && (
                   <div className="flex items-center space-x-3">
                     <Clock className="h-5 w-5 text-green-400" />
                     <div>
@@ -376,7 +376,7 @@ const OrderDetails = () => {
                         Completed
                       </div>
                       <div className="text-sm text-gray-500">
-                        {format(new Date(order.completed_at), "HH:mm, MMM dd")}
+                        {format(new Date(order?.completed_at), "HH:mm, MMM dd")}
                       </div>
                     </div>
                   </div>

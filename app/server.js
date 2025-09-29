@@ -20,19 +20,34 @@ app.use(helmet());
 
 // Rate limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  windowMs: 10 * 60 * 1000, // 10 minutes
+  max: 10000, // limit each IP to 100 requests per windowMs
   message: "Too many requests from this IP, please try again later.",
 });
 app.use("/api/", limiter);
 
 // CORS configuration
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "*",
-    credentials: true,
-  })
-);
+
+// only for dev
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || "http://localhost:3000", // React dev URL
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+// Handle preflight OPTIONS requests for all routes
+app.options("*", cors(corsOptions));
+
+// for production
+// app.use(
+//   cors({
+//     origin: process.env.FRONTEND_URL || "*",
+//     credentials: true,
+//   })
+// );
 
 // Logging
 app.use(morgan("combined"));
@@ -106,6 +121,13 @@ app.get("/", (req, res) => {
 app.use("/api", routes);
 
 // Health check endpoint
+const poolInfo = db.totalCount
+  ? {
+      totalConnections: db.totalCount,
+      idleConnections: db.idleCount,
+      waitingClients: db.waitingCount,
+    }
+  : null;
 app.get("/health", async (req, res) => {
   try {
     const client = await db.connect();
@@ -122,6 +144,7 @@ app.get("/health", async (req, res) => {
     res.json({
       status: "healthy",
       database: "connected",
+      connectionPool: poolInfo,
       timestamp: new Date().toISOString(),
       stats: {
         availableTables: parseInt(tablesResult.rows[0].count),

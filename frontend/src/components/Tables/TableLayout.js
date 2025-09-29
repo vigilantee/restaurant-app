@@ -13,7 +13,7 @@ import {
   Filter,
 } from "lucide-react";
 import toast from "react-hot-toast";
-import EnhancedTableLayout from "./EnhancedTableDisplay";
+import TableLayoutContainer from "./TableLayoutContainer";
 
 const TableLayout = () => {
   const navigate = useNavigate();
@@ -222,7 +222,7 @@ const TableLayout = () => {
 
       {/* Filters */}
 
-      <EnhancedTableLayout />
+      <TableLayoutContainer />
 
       {/* Quick Actions */}
       <div className="bg-white rounded-lg shadow p-6">
