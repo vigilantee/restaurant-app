@@ -191,6 +191,9 @@ const getOrderById = async (req, res, next) => {
 /**
  * Create new order
  */
+/**
+ * Create new order
+ */
 const createOrder = async (req, res, next) => {
   const client = await db.getClient();
 
@@ -202,13 +205,13 @@ const createOrder = async (req, res, next) => {
       customer_id,
       order_type = "dine_in",
       special_instructions,
-      items = [], // Add items array to request body
+      items = [],
     } = req.body;
 
     // Check if table exists and is available (if table_id provided)
     if (table_id) {
       const tableCheck = await client.query(
-        "SELECT id, is_available FROM restaurant_tables WHERE id = $1",
+        "SELECT id, is_available, table_number FROM restaurant_tables WHERE id = $1",
         [table_id]
       );
 
@@ -224,7 +227,7 @@ const createOrder = async (req, res, next) => {
 
       // Mark table as occupied
       await client.query(
-        "UPDATE restaurant_tables SET is_available = false WHERE id = $1",
+        "UPDATE restaurant_tables SET is_available = false, updated_at = CURRENT_TIMESTAMP WHERE id = $1",
         [table_id]
       );
     }
@@ -252,7 +255,7 @@ const createOrder = async (req, res, next) => {
 
       // Fetch menu items with prices from database
       const menuItemsResult = await client.query(
-        `SELECT id, price, is_available 
+        `SELECT id, name, price, is_available 
          FROM menu_items 
          WHERE id = ANY($1::int[])`,
         [menuItemIds]
@@ -281,7 +284,7 @@ const createOrder = async (req, res, next) => {
           await client.query("ROLLBACK");
           return error(
             res,
-            `Menu item with ID ${item.menu_item_id} is not available`,
+            `Menu item "${menuItem.name}" is not available`,
             400
           );
         }
@@ -293,16 +296,23 @@ const createOrder = async (req, res, next) => {
             orderId,
             item.menu_item_id,
             item.quantity,
-            menuItem.price, // Use price from database
+            menuItem.price,
             menuItem.price * item.quantity,
             item.special_notes || null,
           ]
         );
       }
 
-      // Re-fetch order to get calculated totals after items are added
+      // Re-fetch order with complete information including table status
       const updatedOrderResult = await client.query(
-        "SELECT * FROM orders WHERE id = $1",
+        `SELECT o.*, 
+                rt.table_number,
+                rt.is_available as table_is_available,
+                c.name as customer_name
+         FROM orders o
+         LEFT JOIN restaurant_tables rt ON o.table_id = rt.id
+         LEFT JOIN customers c ON o.customer_id = c.id
+         WHERE o.id = $1`,
         [orderId]
       );
 
@@ -314,8 +324,21 @@ const createOrder = async (req, res, next) => {
       );
     }
 
+    // If no items, still return with table info
+    const finalOrderResult = await client.query(
+      `SELECT o.*, 
+              rt.table_number,
+              rt.is_available as table_is_available,
+              c.name as customer_name
+       FROM orders o
+       LEFT JOIN restaurant_tables rt ON o.table_id = rt.id
+       LEFT JOIN customers c ON o.customer_id = c.id
+       WHERE o.id = $1`,
+      [orderId]
+    );
+
     await client.query("COMMIT");
-    return created(res, orderResult.rows[0], "Order created successfully");
+    return created(res, finalOrderResult.rows[0], "Order created successfully");
   } catch (err) {
     await client.query("ROLLBACK");
     next(err);
