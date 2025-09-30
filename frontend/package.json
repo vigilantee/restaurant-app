@@ -16,14 +16,10 @@
         "react-hot-toast": "^2.4.1",
         "react-router-dom": "^6.8.0",
         "react-scripts": "5.0.1",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "pg": "^8.11.3"
     },
     "scripts": {
-        "populate": "node populate-db.js",
-        "populate:dev": "node populate-db.js restaurant_sample_data.json restaurant_dev.sql",
-        "populate:prod": "node populate-db.js restaurant_sample_data.json restaurant_prod.sql",
-        "validate": "node -e \"const pop = require('./populate-db.js'); const p = new pop('restaurant_sample_data.json'); p.validateData(); console.log('Validation completed')\"",
-        "stats": "node -e \"const pop = require('./populate-db.js'); const p = new pop('restaurant_sample_data.json'); console.log(JSON.stringify(p.getStatistics(), null, 2))\"",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -47,7 +43,6 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://localhost:8080",
     "devDependencies": {
         "autoprefixer": "^10.4.21",
         "postcss": "^8.5.6",

@@ -1,13 +1,39 @@
 import axios from "axios";
 
+// Get API URL - prioritize Electron's dynamic URL, fallback to environment variable
+const getBaseURL = () => {
+  // Check if running in Electron
+  if (window.REACT_APP_API_URL) {
+    return window.REACT_APP_API_URL;
+  }
+
+  // Fallback to environment variable or default
+  return process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+};
+
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8080/api",
+  baseURL: getBaseURL(),
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
   },
 });
+
+// Update baseURL if it changes (for Electron hot reload)
+if (window.electron?.isElectron) {
+  const checkAndUpdateBaseURL = () => {
+    const newBaseURL = getBaseURL();
+    if (api.defaults.baseURL !== newBaseURL) {
+      api.defaults.baseURL = newBaseURL;
+      console.log("API baseURL updated to:", newBaseURL);
+    }
+  };
+
+  // Check on mount and periodically
+  checkAndUpdateBaseURL();
+  setInterval(checkAndUpdateBaseURL, 5000);
+}
 
 // Request interceptor
 api.interceptors.request.use(

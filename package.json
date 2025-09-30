@@ -1,0 +1,76 @@
+{
+    "name": "restaurant-electron-app",
+    "version": "1.0.0",
+    "description": "Restaurant Order Management Desktop App",
+    "main": "main.js",
+    "scripts": {
+        "start": "npm run build:frontend && electron .",
+        "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:electron\"",
+        "dev:frontend": "cd frontend && npm start",
+        "dev:backend": "cd app && NODE_ENV=development nodemon server.js",
+        "dev:electron": "wait-on http://localhost:3000 && NODE_ENV=development electron .",
+        "setup": "node scripts/setup.js",
+        "setup:unix": "chmod +x setup.sh && ./setup.sh",
+        "setup:win": "setup.bat",
+        "build:win": "npm run build:frontend && electron-builder --win",
+        "build:mac": "npm run build:frontend && electron-builder --mac",
+        "build:linux": "npm run build:frontend && electron-builder --linux",
+        "build:frontend": "cd frontend && npm run build",
+        "install:all": "npm install && cd frontend && npm install && cd ../app && npm install && cd ..",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "build": {
+        "appId": "com.restaurant.app",
+        "productName": "Restaurant Manager",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "main.js",
+            "preload.js",
+            "app/**/*",
+            "frontend/build/**/*",
+            "postgres/**/*",
+            "node_modules/**/*"
+        ],
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon.ico"
+        },
+        "mac": {
+            "target": "dmg",
+            "icon": "assets/icon.icns"
+        },
+        "linux": {
+            "target": "AppImage",
+            "icon": "assets/icon.png"
+        },
+        "extraResources": [
+            {
+                "from": "postgres/init",
+                "to": "postgres/init"
+            }
+        ]
+    },
+    "dependencies": {
+        "axios": "^1.6.0",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "express-rate-limit": "^7.1.5",
+        "express-validator": "^7.0.1",
+        "helmet": "^7.1.0",
+        "jsonwebtoken": "^9.0.2",
+        "morgan": "^1.10.0",
+        "pg": "^8.11.3",
+        "find-free-port": "^2.0.0"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1",
+        "nodemon": "^3.0.1",
+        "wait-on": "^7.2.0"
+    }
+}
