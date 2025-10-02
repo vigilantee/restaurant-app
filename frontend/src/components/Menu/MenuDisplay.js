@@ -3,6 +3,22 @@ import { menuAPI } from "../../services/api";
 import { Search, Filter, Clock, Star, Plus } from "lucide-react";
 import toast from "react-hot-toast";
 
+function toPascalCaseWithSpaces(str) {
+  // Split the string by spaces to get individual words
+  const words = str.split(" ");
+
+  // Map over the words, capitalizing the first letter of each
+  const pascalCasedWords = words.map((word) => {
+    if (word.length === 0) {
+      return ""; // Handle empty strings if present
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  // Join the words back together with spaces
+  return pascalCasedWords.join(" ");
+}
+
 /**
  * Enhanced MenuDisplay Component
  *
@@ -226,7 +242,7 @@ const MenuDisplay = ({
                       {/* Item Header */}
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="font-medium text-gray-900">
-                          {item.name}
+                          {toPascalCaseWithSpaces(item.name)}
                         </h3>
                         <div className="flex items-center space-x-2">
                           <span className="text-lg font-semibold text-gray-900">
