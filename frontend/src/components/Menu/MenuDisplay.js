@@ -219,7 +219,9 @@ const MenuDisplay = ({
                       key={item.id}
                       className={`border rounded-lg p-4 ${
                         !item.is_available ? "opacity-60" : ""
-                      } ${isModal ? "hover:shadow-md transition-shadow" : ""}`}
+                      } ${isModal ? "hover:shadow-md transition-shadow" : ""}${
+                        item.is_vegetarian ? "bg-green-100" : "bg-amber-50"
+                      }`}
                     >
                       {/* Item Header */}
                       <div className="flex justify-between items-start mb-2">
@@ -257,7 +259,7 @@ const MenuDisplay = ({
                         {/* Tags and Labels */}
                         <div className="flex items-center space-x-2">
                           {item.is_vegetarian && (
-                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
+                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-500 text-white">
                               Veg
                             </span>
                           )}
