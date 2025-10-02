@@ -114,7 +114,7 @@ const TableLayoutContainer = () => {
       };
 
       await ordersAPI.create(orderData);
-      await tablesAPI.toggleAvailability(newOrder.table_id);
+      // await tablesAPI.toggleAvailability(newOrder.table_id);
       await loadTableData();
 
       setShowMenuModal(false);

@@ -84,6 +84,8 @@ const OrderDetails = () => {
     );
   }
 
+  console.log("order?.subtotal....", order);
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -224,7 +226,7 @@ const OrderDetails = () => {
                     </div>
                     <div className="text-right ml-4">
                       <div className="text-sm font-medium text-gray-900">
-                        ₹{item.total_price?.toFixed?.(2)}
+                        ₹{item.total_price}
                       </div>
                       {item.preparation_time && (
                         <div className="text-xs text-gray-500 flex items-center">
@@ -283,27 +285,27 @@ const OrderDetails = () => {
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">Subtotal:</span>
                 <span className="text-gray-900">
-                  ₹{order?.subtotal?.toFixed?.(2) || "0.00"}
+                  ₹{order?.subtotal || "0.00"}
                 </span>
               </div>
               {order?.discount_amount > 0 && (
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Discount:</span>
                   <span className="text-red-600">
-                    -₹{order?.discount_amount?.toFixed?.(2)}
+                    -₹{order?.discount_amount}
                   </span>
                 </div>
               )}
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">Tax:</span>
                 <span className="text-gray-900">
-                  ₹{order?.tax_amount?.toFixed?.(2) || "0.00"}
+                  ₹{order?.tax_amount || "0.00"}
                 </span>
               </div>
               <div className="border-t pt-2">
                 <div className="flex justify-between font-medium">
                   <span>Total:</span>
-                  <span>₹{order?.total_amount?.toFixed?.(2) || "0.00"}</span>
+                  <span>₹{order?.total_amount || "0.00"}</span>
                 </div>
               </div>
 
